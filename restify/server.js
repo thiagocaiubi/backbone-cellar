@@ -65,7 +65,9 @@ var WineCollection = Backbone.Collection.extend({
 server.use(restify.bodyParser());
 
 function getWines(req, res, next) {
-	var w = new Wine(),
+	var w = new Wine({
+        name: "Ligia Magnanini"
+    }),
 		list = new WineCollection();
 
 	list.add(w);
